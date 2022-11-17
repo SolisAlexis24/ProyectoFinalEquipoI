@@ -17,10 +17,8 @@ import java.util.logging.Logger;
 public class GeneradorDatos {
     public String nom = "";
     public String ape = "";
-    public String nombresGen = "";
     List<String> nomList = new ArrayList<>();
     List<String> apeList = new ArrayList<>();
-    List<String> nomGenList = new ArrayList<>();
     List<Integer> EdadesList = new ArrayList<>();
 
     public void leer(){
@@ -57,55 +55,38 @@ public class GeneradorDatos {
             cont++;
         }
     }
-    public void generarMombres(){
-        try {
-            for (int i = 0; i <= 500; i++) {
-                Random numAl = new Random();
-                boolean elec = numAl.nextBoolean();
-                //Nombres de mujer [0, 50]
-                if(elec){
-                    int r1 = (int)(Math.random()*50);
-                    int r2 = (int)(Math.random()*50);
-                    int r3 = (int)(Math.random()*200);
-                    nombresGen += nomList.get(r1) + " "+ nomList.get(r2)+" "+ apeList.get(r3)+ " " + apeList.get(r1) + ",";
-                    nomGenList.add(nomList.get(r1) + " "+ nomList.get(r2)+" "+ apeList.get(r3)+ " " + apeList.get(r1));
-                }
-                //Para nombres de hombre (51, 100)
-                else{
-                    int r1 = (int)(Math.random()*(100-51)+50);
-                    int r2 = (int)(Math.random()*(100-51)+50);  
-                    int r3 = (int)(Math.random()*200);
-                    nombresGen += nomList.get(r1) + " "+ nomList.get(r2)+" "+ apeList.get(r3)+ " " + apeList.get(r1) + ",";
-                    nomGenList.add(nomList.get(r1) + " "+ nomList.get(r2)+" "+ apeList.get(r3)+ " " + apeList.get(r1));
-                }
-            }
-            FileWriter fw = new FileWriter("NombresGenerados.csv");
-            BufferedWriter bw = new BufferedWriter(fw);
-            PrintWriter sd = new PrintWriter(bw);
-            sd.print(nombresGen);
-            sd.close();
-        }catch (IOException ex) {
-            System.out.println("No fue posible abrir el archivo");
+    public String generarNombre(){
+        String nomGen = "";
+        Random numAl = new Random();
+        boolean elec = numAl.nextBoolean();
+        //Para nombres de mujer (0, 50)
+        if(elec){
+            int r1 = (int)(Math.random()*50);
+            int r2 = (int)(Math.random()*50);
+            int r3 = (int)(Math.random()*228);
+            nomGen = nomList.get(r1) + " "+ nomList.get(r2)+" "+ apeList.get(r3)+ " " + apeList.get(r1));
         }
+        //Para nombres de hombre (51, 100)
+        else{
+            int r1 = (int)(Math.random()*(100-51)+50);
+            int r2 = (int)(Math.random()*(100-51)+50);  
+            int r3 = (int)(Math.random()*228);
+            nomGen = nomList.get(r1) + " "+ nomList.get(r2)+" "+ apeList.get(r3)+ " " + apeList.get(r1));
+       }
+        return nomGen();
     }
-    public void generadorEdad(){
-        for (int i = 0; i <= 500; i++) {
-            int r1 = (int)(Math.random()*(25-19)+18);
-            EdadesList.add(r1);
-        }
+    public int generadorEdad(){
+        int r1 = (int)(Math.random()*(25-19)+18);
+        return r1;
     }
-    public void generadorNumCuenta(){
+    
+    public String generadorNumCuenta(){
         String numCuenta = "";
-        String numsCuenta = "";
-        for (int i = 0; i <= 500; i++) {
-            for (int j = 0; j < 9; j++) {
-                int r1 = (int)(Math.random()*(9-1)+0);
-                numCuenta += String.valueOf(r1);
-            }
-            numsCuenta += numCuenta + ",";
-            numCuenta = "";
+        for (int j = 0; j < 9; j++) {
+            int r1 = (int)(Math.random()*(9-1)+0);
+            numCuenta += String.valueOf(r1);
         }
-        System.out.println(numsCuenta);
+        return numCuenta;
     }
 }
 
