@@ -21,5 +21,5 @@ public class ProyectoFinal {
         gen1.leer();
         gen1.generarMombres();
         System.out.println(al.getNombre());
-       }
+    }
 }
