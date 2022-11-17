@@ -85,20 +85,3 @@ public class GeneradorNombres {
 
 }
 
-            /*
-            Random numAl = new Random();
-            boolean elec = numAl.nextBoolean();
-            if(elec){
-            int r1 = (int)(Math.random()*50);
-            int r2 = (int)(Math.random()*50);
-            int r3 = (int)(Math.random()*228);
-            alu.setNombre(nomList.get(r1) + " "+ nomList.get(r2)+" "+ apeList.get(r3)+ " " + apeList.get(r1));
-            }
-            //Para nombres de hombre (51, 100)
-            else{
-            int r1 = (int)(Math.random()*(100-51)+50);
-            int r2 = (int)(Math.random()*(100-51)+50);  
-            int r3 = (int)(Math.random()*228);
-            alu.setNombre(nomList.get(r1) + " "+ nomList.get(r2)+" "+ apeList.get(r3)+ " " + apeList.get(r1));
-            }
-             */
