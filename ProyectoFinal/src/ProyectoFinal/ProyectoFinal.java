@@ -16,10 +16,8 @@ public class ProyectoFinal {
         Alumno al = new Alumno();
         }
         */
-        Alumno al = new Alumno();
         GeneradorNombres gen1 = new GeneradorNombres();
         gen1.leer();
         gen1.generarMombres();
-        System.out.println(al.getNombre());
     }
 }
