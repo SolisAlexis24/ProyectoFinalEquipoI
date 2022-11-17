@@ -14,6 +14,7 @@ import java.util.StringTokenizer;
 public class GeneradorNombres {
     public String nom = "";
     public String ape = "";
+    public String nombresGen = "";
     List<String> nomList = new ArrayList<>();
     List<String> apeList = new ArrayList<>();
 
@@ -53,7 +54,6 @@ public class GeneradorNombres {
     }
     public void generarMombres(){
         try {
-            String nombresGen = "";
             for (int i = 0; i <= 500; i++) {
                 Random numAl = new Random();
                 boolean elec = numAl.nextBoolean();
