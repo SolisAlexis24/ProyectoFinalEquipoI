@@ -25,6 +25,7 @@ public class menuAD {
                 }
                 case 2 ->{
                     generarNumInsc op = new generarNumInsc();
+                    op.generar();
                 }
                 default ->{
                     System.out.println("Opcion Invalida");
