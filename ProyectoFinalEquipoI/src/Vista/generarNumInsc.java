@@ -10,7 +10,7 @@ import Controlador.generadorNumsInsc;
  */
 public class generarNumInsc {
     public void generar(){
-        System.out.println("¿Desa generar los numeros de inscripcion?[s/n]");
+        System.out.println("¿Desea generar los numeros de inscripcion?[s/n]");
         try{
             String elec = "";
             BufferedReader br;

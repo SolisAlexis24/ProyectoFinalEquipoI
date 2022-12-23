@@ -38,8 +38,7 @@ public class login {
         System.out.println("Alumno");
     }
     public void loginAd(){
-        System.out.println("Introduzca su contrasenna para ingresar:");
-
+        System.out.println("Introduzca su contrasena para ingresar:");
         try {
             String cont = "";
             BufferedReader br;
