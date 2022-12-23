@@ -5,8 +5,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- *
- * @author Alexis
+ * Esta clase es para el login general, con ella se muestra un menu para poder acceder
+ * como un administrador o como un alumno
+ * @author EquipoI
  */
 public class login {
     private int acceso = 0;
