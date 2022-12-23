@@ -3,6 +3,7 @@ package Vista;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import Controlador.*;
 
 /**
  *Esta clase muestra el menu para poder generar los numeros de inscripcion
@@ -25,7 +26,7 @@ public class generarNumInsc {
             }
             }
         }catch(IOException ioe){
-            System.out.println("Imposible leer eleccion")
+            System.out.println("Imposible leer eleccion");
         }
     }
 }

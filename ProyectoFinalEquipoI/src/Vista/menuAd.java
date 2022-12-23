@@ -4,8 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 /**
- *Esta clase muestra las opciones del administrador para poder acceder a ellas
- * @author EquipoI
+ *
+ * @author Alexis
  */
 public class menuAD {
     public void opc(){

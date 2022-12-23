@@ -55,6 +55,5 @@ public class login {
         } catch (IOException ex) {
             System.out.println("Contrasena imposible de leer");
         }
-           
     }
 }
