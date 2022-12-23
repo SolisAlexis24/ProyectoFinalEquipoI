@@ -22,6 +22,7 @@ public class menuAD {
             switch (selci) {
                 case 1 -> {
                     modificarDatosAdmin op = new modificarDatosAdmin();
+                    op.menu();
                 }
                 case 2 ->{
                     generarNumInsc op = new generarNumInsc();
