@@ -18,7 +18,6 @@ public class generarNumInsc {
             elec = br.readLine();
             switch(elec){
             case "s" ->{
-                
             }
             case "n"->{
 
