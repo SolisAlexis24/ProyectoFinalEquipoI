@@ -3,7 +3,7 @@ package Vista;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import Controlador.*;
+import 
 
 /**
  *Esta clase muestra el menu para poder generar los numeros de inscripcion
@@ -19,7 +19,7 @@ public class generarNumInsc {
             elec = br.readLine();
             switch(elec){
             case "s" ->{
-
+                
             }
             case "n"->{
 
