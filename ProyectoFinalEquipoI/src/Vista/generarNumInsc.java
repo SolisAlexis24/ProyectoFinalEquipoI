@@ -3,7 +3,6 @@ package Vista;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import 
 
 /**
  *Esta clase muestra el menu para poder generar los numeros de inscripcion
