@@ -3,6 +3,9 @@ package Vista;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+
+import Controlador.LeeryGuardar;
 
 /**
  * Esta clase es para el login general, con ella se muestra un menu para poder acceder
@@ -35,7 +38,24 @@ public class login {
         }
     }
     private void loginAL() {
-        System.out.println("Alumno");
+        System.out.println("Introduzca su numero de cuenta:");
+        LeeryGuardar lect = new LeeryGuardar();
+        ArrayList<String> numsCuenta = new ArrayList<>();
+        numsCuenta = lect.lyg("numsCuenta.csv");
+        try{
+            String numC = "";
+            BufferedReader br;
+            br = new BufferedReader(new InputStreamReader(System.in));
+            numC = br.readLine();
+            if(numsCuenta.contains(numC)){
+                
+            }else{
+                System.out.println("Numero de cuneta invalido");
+                loginAL();
+            }
+        }catch(IOException ioe){
+            System.out.println("falla al recibir los datos");
+        }
     }
     public void loginAd(){
         System.out.println("Introduzca su contrasena para ingresar:");
