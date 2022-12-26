@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- *
- * @author Alexis
+ *Clase que sirve para poder modificar los datos de los alumnos
+ * @author EquipoI
  */
 public class modificarDatosAdmin {
     public void menu(){

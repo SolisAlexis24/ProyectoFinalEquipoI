@@ -6,6 +6,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
+/**
+ * Esta clase sirve para poder leer desde un archivo csv y guardar su contenido en 
+ * una lista ligada
+ * @author EquipoI
+ */
 public class LeeryGuardar {
     public ArrayList<String> lyg(String name){
         ArrayList<String> listaRetorno = new ArrayList<>();
