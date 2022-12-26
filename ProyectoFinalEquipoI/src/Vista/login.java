@@ -37,6 +37,7 @@ public class login {
             System.out.println("Error al leer desde teclado");
         }
     }
+    
     private void loginAL() {
         System.out.println("Introduzca su numero de cuenta:");
         LeeryGuardar lect = new LeeryGuardar();
@@ -48,7 +49,7 @@ public class login {
             br = new BufferedReader(new InputStreamReader(System.in));
             numC = br.readLine();
             if(numsCuenta.contains(numC)){
-                
+
             }else{
                 System.out.println("Numero de cuneta invalido");
                 loginAL();
@@ -57,6 +58,7 @@ public class login {
             System.out.println("falla al recibir los datos");
         }
     }
+
     public void loginAd(){
         System.out.println("Introduzca su contrasena para ingresar:");
         try {
