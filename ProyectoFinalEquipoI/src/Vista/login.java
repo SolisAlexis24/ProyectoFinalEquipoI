@@ -50,6 +50,9 @@ public class login {
             numC = br.readLine();
             if(numsCuenta.contains(numC)){
 
+                menuAL men = new menuAL();
+                men.numCuenta = numC;
+                men.opc();
             }else{
                 System.out.println("Numero de cuneta invalido");
                 loginAL();
