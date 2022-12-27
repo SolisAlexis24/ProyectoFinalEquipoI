@@ -38,6 +38,5 @@ public class menuAL {
         } catch (IOException ex) {
             System.out.println("No fue posible leer la seleccion");
         }
-            
     }
 }

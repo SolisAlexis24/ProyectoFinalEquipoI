@@ -12,7 +12,6 @@ public class menuAD {
         System.out.println("OPCIONES DE MENU ADMIN");
         System.out.println("1. Consultar datos de Estudiantes");
         System.out.println("2. Generar numero de inscripcion");
-
         try {
             String selc = "";
             BufferedReader br;

@@ -22,7 +22,7 @@ public class modificarDatosAdmin {
             elec = br.readLine();
             int eleci = Integer.parseInt(elec);
             switch (eleci) {
-            case 1 ->crear();
+            case 1 -> crear();
             case 2 -> visualizar();
             case 3 -> modificar();
             case 4 -> eliminar();
@@ -37,6 +37,7 @@ public class modificarDatosAdmin {
     }
     public void crear(){
         System.out.println("--CREAR ALUMNO--");
+        //TODO Implementar crear alumno
     }
     public void visualizar(){
         System.out.println("--vISUALIZAR ALUMNO--");

@@ -49,7 +49,7 @@ public class login {
             br = new BufferedReader(new InputStreamReader(System.in));
             numC = br.readLine();
             if(numsCuenta.contains(numC)){
-
+                
                 menuAL men = new menuAL();
                 men.numCuenta = numC;
                 men.opc();
