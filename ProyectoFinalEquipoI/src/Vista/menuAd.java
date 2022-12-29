@@ -8,6 +8,9 @@ import java.io.InputStreamReader;
  * @author EquipoI
  */
 public class menuAD {
+    /**
+     * Menu para las opciones que tiene el admin
+     */
     public void opc(){
         System.out.println("OPCIONES DE MENU ADMIN");
         System.out.println("1. Consultar datos de Estudiantes");

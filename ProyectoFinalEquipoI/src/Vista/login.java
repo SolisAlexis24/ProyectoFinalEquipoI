@@ -14,6 +14,9 @@ import Controlador.LeeryGuardar;
  */
 public class login {
     private int acceso = 0;
+    /**
+     * Clase de menu de acceso
+     */
     public void loginin(){
         System.out.println("¿Qué clase de usuario eres?");
         System.out.println("1. Administrador académico");
@@ -37,7 +40,9 @@ public class login {
             System.out.println("Error al leer desde teclado");
         }
     }
-    
+    /**
+     * Clase de menu del login del alumno
+     */
     private void loginAL() {
         System.out.println("Introduzca su numero de cuenta:");
         LeeryGuardar lect = new LeeryGuardar();
@@ -48,6 +53,7 @@ public class login {
             BufferedReader br;
             br = new BufferedReader(new InputStreamReader(System.in));
             numC = br.readLine();
+            //TODO:Verificar si el numero de cuneta esta en la base de datos y si lo esta, pedir la constrasena
             if(numsCuenta.contains(numC)){
                 
                 menuAL men = new menuAL();
@@ -61,7 +67,9 @@ public class login {
             System.out.println("falla al recibir los datos");
         }
     }
-
+    /**
+     * Clase de login para el admin
+     */
     public void loginAd(){
         System.out.println("Introduzca su contrasena para ingresar:");
         try {

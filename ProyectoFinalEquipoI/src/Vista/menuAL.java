@@ -4,8 +4,15 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ *  Esta clase muestra las acciones que puede realizar el alumno
+ * @author EquipoI
+ */
 public class menuAL {
     public String numCuenta = "";
+    /**
+     * Este metodo muestra el menu de opciones
+     */
     public void opc(){
         System.out.println("OPCIONES DE MENU ALUMNO");
         System.out.println("1. Consultar datos academicos y personales");

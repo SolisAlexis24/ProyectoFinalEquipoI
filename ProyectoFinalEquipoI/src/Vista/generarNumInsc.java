@@ -9,6 +9,9 @@ import Controlador.generadorNumsInsc;
  * @author EquipoI
  */
 public class generarNumInsc {
+    /**
+     * Metodo menu para generar nums de insc
+     */
     public void generar(){
         System.out.println("¿Desea generar los numeros de inscripcion?[s/n]");
         try{
@@ -20,6 +23,7 @@ public class generarNumInsc {
             case "s" ->{
                 generadorNumsInsc gen = new generadorNumsInsc();
                 gen.generar();
+                //TODO:Hacer que el generador funcione
                 menuAD menu = new menuAD();
                 menu.opc();
             }

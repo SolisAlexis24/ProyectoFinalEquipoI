@@ -9,6 +9,9 @@ import java.io.InputStreamReader;
  * @author EquipoI
  */
 public class modificarDatosAdmin {
+    /**
+     * Metodo de menu de acciones
+     */
     public void menu(){
         System.out.println("¿Que opcion desea elegir?");
         System.out.println("1. Crear alumno");
@@ -35,17 +38,32 @@ public class modificarDatosAdmin {
             System.out.println("Imposible leer");
         }
     }
+    /**
+     * Menu para crear alumno
+     */
     public void crear(){
         System.out.println("--CREAR ALUMNO--");
-        //TODO Implementar crear alumno
+        //TODO: Implementar crear alumno
     }
+    /**
+     * Menu para visualizrar datos de un alumno
+     */
     public void visualizar(){
-        System.out.println("--vISUALIZAR ALUMNO--");
+        System.out.println("--VISUALIZAR ALUMNO--");
+        //TODO: Implementar visualizar alumno
     }
+    /**
+     * Menu para modificar alumno
+     */
     public void modificar(){
         System.out.println("--MODIFICAR ALUMNO--");
+        //TODO: Implementar Modificar alumno
     }
+    /**
+     * Menu para aliminar alumno
+     */
     public void eliminar(){
         System.out.println("--ELIMINAR ALUMNO--");
+        //TODO: Implementar eliminar alumno
     }
 }
