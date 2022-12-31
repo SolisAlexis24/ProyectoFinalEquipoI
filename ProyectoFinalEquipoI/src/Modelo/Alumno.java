@@ -13,4 +13,5 @@ public class Alumno{
     public double promedio;
     public int numIns;
     public double indicador;
+    
 }
