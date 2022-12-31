@@ -14,7 +14,7 @@ public class menuAD {
     public void opc(){
         System.out.println("OPCIONES DE MENU ADMIN");
         System.out.println("1. Consultar datos de Estudiantes");
-        System.out.println("2. Generar numero de inscripcion");
+        System.out.println("2. Salir");
         try {
             String selc = "";
             BufferedReader br;
@@ -27,8 +27,8 @@ public class menuAD {
                     op.menu();
                 }
                 case 2 ->{
-                    generarNumInsc op = new generarNumInsc();
-                    op.generar();
+                    login op = new login();
+                    op.loginin();
                 }
                 default ->{
                     System.out.println("Opcion Invalida");

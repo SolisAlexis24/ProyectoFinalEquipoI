@@ -3,7 +3,6 @@ package Vista;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.LinkedList;
 import java.util.Scanner;
 import Modelo.Alumno;
 import Controlador.*;
@@ -33,6 +32,7 @@ public class modificarDatosAdmin {
             case 2 -> visualizar();
             case 3 -> modificar();
             case 4 -> eliminar();
+            case 6 -> salir();
             default -> {
                 System.out.println("Opcion invalida");
                 menu();
@@ -54,45 +54,56 @@ public class modificarDatosAdmin {
      */
     public void visualizar(){
         System.out.println("--VISUALIZAR ALUMNO--");
-        //TODO: Implementar visualizar alumno
+        CRUDAlumnos crud = new CRUDAlumnos();
+        if(crud.obtenerNumCuenta(GeneradorAlumnos.listado)){
+            crud.visualizar(GeneradorAlumnos.listado);
+        }
+        else{
+            System.out.println("Numero de cuenta invalido");
+        }
+        menu();
     }
     /**
      * Menu para modificar alumno
      */
     public void modificar(){
         System.out.println("--MODIFICAR ALUMNO--");
-        GeneradorAlumnos gen = new GeneradorAlumnos();
         CRUDAlumnos crud = new CRUDAlumnos();
         HistorialAcademico his = new HistorialAcademico();
-        if(crud.obtenerNumCuenta(gen.listado)){
+        if(crud.obtenerNumCuenta(GeneradorAlumnos.listado)){
             Scanner leer = new Scanner(System.in);
             int op = 0;
-            while(op!=5){
+            while(op!=6){
                 System.out.println("Ingrese la opción deseada");
                 System.out.println("1. Alta de materia");
                 System.out.println("2. Baja de materia");
                 System.out.println("3. Cambiar calificación de materia");
                 System.out.println("4. Consultar historial academica");
-                System.out.println("5. Guardar y regresar");
+                System.out.println("5. Cambiar direccion");
+                System.out.println("6. Visualizar datos academicos");
+                System.out.println("7. Guardar y regresar");
                 op = leer.nextInt();
                 switch(op){
-                    case 1: crud.alta(gen.listado);
+                    case 1: crud.alta(GeneradorAlumnos.listado);
                     break;
-                    case 2: crud.baja(gen.listado);
+                    case 2: crud.baja(GeneradorAlumnos.listado);
                     break;
-                    case 3: crud.cambio(gen.listado);
+                    case 3: crud.cambio(GeneradorAlumnos.listado);
                     break;
-                    case 4: crud.consulta(gen.listado);
+                    case 4: crud.consulta(GeneradorAlumnos.listado);
                     break;
-                    case 5: for (Alumno alumno : gen.listado) {
+                    case 5: crud.cambioDomicilio(GeneradorAlumnos.listado);
+                    break;
+                    case 6: for (Alumno alumno : GeneradorAlumnos.listado) {
                                 if(alumno.numCuenta == crud.numCuenta){
                                     alumno.promedio = his.promedio(alumno.histAc);
                                     System.out.println("Alumno: "+alumno.nombre);
                                     System.out.println("Promedio: "+alumno.promedio);
                                     System.out.println("Historial académico:\n"+alumno.histAc);
-                                    menu();
                                 }
                             }
+                    break;
+                    case 7: menu();
                     break;
                     default: System.out.println("opción no válida");
                     break;
@@ -100,13 +111,24 @@ public class modificarDatosAdmin {
             }
         }else 
             System.out.println("No se encontró el número de cuenta");
-        //TODO: Implementar Modificar alumno
     }
     /**
      * Menu para aliminar alumno
      */
     public void eliminar(){
         System.out.println("--ELIMINAR ALUMNO--");
-        //TODO: Implementar eliminar alumno
+        CRUDAlumnos crud = new CRUDAlumnos();
+        if(crud.obtenerNumCuenta(GeneradorAlumnos.listado)){
+            crud.eliminar(GeneradorAlumnos.listado);
+            System.out.println("Alumno eliminado con exito");
+        }
+        menu();
+    }
+    /**
+     * Salir al menu principal
+     */
+    public void salir(){
+        menuAD men = new menuAD();
+        men.opc();
     }
 }

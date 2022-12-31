@@ -46,9 +46,8 @@ public class login {
      */
     private void loginAL() {
         CRUDAlumnos crud = new CRUDAlumnos();
-        GeneradorAlumnos gen = new GeneradorAlumnos();
         try{
-            if(crud.obtenerNumCuenta(gen.listado)){
+            if(crud.obtenerNumCuenta(GeneradorAlumnos.listado)){
                 menuAL men = new menuAL();
                 men.numCuenta = crud.numCuenta;
                 men.opc();

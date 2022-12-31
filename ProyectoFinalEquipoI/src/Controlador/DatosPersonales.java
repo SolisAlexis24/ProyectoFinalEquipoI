@@ -46,13 +46,15 @@ public class DatosPersonales {
     }
     
     public int numCuenta(){
+        Random rand = new Random();
         String numCuen="";
         for (int i = 0; i < 9; i++) {
-            int r1 = (int)(Math.random()*(9-1)+0);
+            int r1 = rand.nextInt(9);
+            if(i==0){
+                if(r1==0)
+                    r1+=1;
+            }
             numCuen += String.valueOf(r1);
-        }
-        if(numCuen.length()<9){
-            numCuen += "1";
         }
         return Integer.parseInt(numCuen);
     }
