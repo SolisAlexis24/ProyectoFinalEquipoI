@@ -9,7 +9,7 @@ import java.io.InputStreamReader;
  * @author EquipoI
  */
 public class menuAL {
-    public String numCuenta = "";
+    public int numCuenta;
     /**
      * Este metodo muestra el menu de opciones
      */

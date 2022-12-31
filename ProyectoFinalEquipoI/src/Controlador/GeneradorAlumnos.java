@@ -1,5 +1,9 @@
 package Controlador;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.LinkedList;
 import Modelo.Alumno;
 
@@ -8,7 +12,7 @@ import Modelo.Alumno;
  * @author tripl
  */
 public class GeneradorAlumnos {
-    public LinkedList<Alumno> listado = new LinkedList<>(); //Lista de alumnos
+    public static LinkedList<Alumno> listado = new LinkedList<>(); //Lista de alumnos
     
     public void generar(){
         HistorialAcademico hist = new HistorialAcademico();
@@ -38,6 +42,20 @@ public class GeneradorAlumnos {
         //Asignación de número de inscripción
         for (Alumno alumno : listado) {
             alumno.numIns = hist.numIns(alumno.indicador, indicadores);
+        }
+
+        FileWriter ar;
+        PrintWriter pw;
+        try {
+            ar = new FileWriter("numsC.txt");
+            pw = new PrintWriter(ar);
+            for (Alumno alumno : listado) {
+                Integer nc = alumno.numCuenta;
+                pw.println(nc.toString(alumno.numCuenta));
+            }
+            pw.close();
+        } catch (IOException e) {
+            System.out.println("FALLA AL GUARDAR NUMEROS DE CUENTA");
         }
     }
 }

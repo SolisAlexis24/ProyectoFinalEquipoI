@@ -6,7 +6,7 @@ package Vista;
  */
 public class modificarDatosPeronsalesAl {
     //TODO: Implementar modificar datos personales
-    public void menu(String key){
+    public void menu(int key){
 
     }
 }

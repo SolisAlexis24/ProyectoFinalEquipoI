@@ -21,7 +21,6 @@ public class DatosPersonales {
         String dir=null;
         Random rand = new Random();
         int num=rand.nextInt(500), cont=0;
-
         try {
             FileReader fr = new FileReader("direcciones.csv");
             BufferedReader br = new BufferedReader(fr);
@@ -51,6 +50,9 @@ public class DatosPersonales {
         for (int i = 0; i < 9; i++) {
             int r1 = (int)(Math.random()*(9-1)+0);
             numCuen += String.valueOf(r1);
+        }
+        if(numCuen.length()<9){
+            numCuen += "1";
         }
         return Integer.parseInt(numCuen);
     }

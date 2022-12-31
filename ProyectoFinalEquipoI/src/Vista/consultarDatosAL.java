@@ -10,7 +10,7 @@ public class consultarDatosAL {
      * Este metodo permite encontar por medio el numero de cuenta, los datos del alumno
      * @param key Numero de cuenta 
      */
-    public void mtr(String key){
+    public void mtr(int key){
         
     }
 }

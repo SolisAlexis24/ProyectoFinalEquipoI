@@ -11,7 +11,7 @@ public class consultarNumInsc {
      * el numero de inscripcion generado
      * @param key Numero de cuenta
      */
-    public void mtr(String key){
+    public void mtr(int key){
         
     }
 }
