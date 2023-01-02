@@ -4,9 +4,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.LinkedList;
-
+import Modelo.Alumno;
 import Controlador.CRUDAlumnos;
 import Controlador.GeneradorAlumnos;
+
 
 /**
  * Esta clase es para el login general, con ella se muestra un menu para poder acceder
@@ -22,6 +23,7 @@ public class login {
         System.out.println("¿Qué clase de usuario eres?");
         System.out.println("1. Administrador académico");
         System.out.println("2. Estudiante");
+        System.out.println("3. Salir");
         try{
             String tipoUs = "";
             BufferedReader br;
@@ -32,6 +34,7 @@ public class login {
             switch (tipoUsn) {
             case 1 -> loginAd();
             case 2 -> loginAL();
+            case 3 -> Salir();
             default -> {
                 System.out.println("Opcion no reconocida");
                 loginin();
@@ -79,5 +82,8 @@ public class login {
         } catch (IOException ex) {
             System.out.println("Contrasena imposible de leer");
         }
+    }
+
+    public void Salir(){
     }
 }

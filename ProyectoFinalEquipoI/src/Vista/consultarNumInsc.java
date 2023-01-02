@@ -8,7 +8,6 @@ import Controlador.GeneradorAlumnos;
  * @author EquipoI
  */
 public class consultarNumInsc {
-    //TODO: Implementar consultar numero de inscripcion
     /**
      * Este metodo permite, por medio el numero de cuenta, encontrar y mostrar 
      * el numero de inscripcion generado

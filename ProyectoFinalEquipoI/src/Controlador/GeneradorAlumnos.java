@@ -1,6 +1,5 @@
 package Controlador;
 
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -51,7 +50,7 @@ public class GeneradorAlumnos {
             pw = new PrintWriter(ar);
             for (Alumno alumno : listado) {
                 Integer nc = alumno.numCuenta;
-                pw.println(nc.toString(alumno.numCuenta));
+                pw.println(Integer.toString(alumno.numCuenta));
             }
             pw.close();
         } catch (IOException e) {

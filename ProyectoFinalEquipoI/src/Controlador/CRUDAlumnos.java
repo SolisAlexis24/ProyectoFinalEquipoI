@@ -2,7 +2,6 @@ package Controlador;
 
 import java.util.LinkedList;
 import java.util.Scanner;
-import java.util.StringTokenizer;
 
 import Modelo.Alumno;
 
