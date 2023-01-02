@@ -8,7 +8,6 @@ import Controlador.GeneradorAlumnos;
  * @author EquipoI
  */
 public class modificarDatosPeronsalesAl {
-    //TODO: Implementar modificar datos personales
     public void menu(int key){
         CRUDAlumnos crud = new CRUDAlumnos();
         crud.numCuenta = key;
