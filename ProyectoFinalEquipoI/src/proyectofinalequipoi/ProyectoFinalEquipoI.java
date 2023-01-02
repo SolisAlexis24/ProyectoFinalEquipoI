@@ -14,5 +14,4 @@ public class ProyectoFinalEquipoI {
         login menu = new Vista.login();
         menu.loginin();
     }
-    
 }

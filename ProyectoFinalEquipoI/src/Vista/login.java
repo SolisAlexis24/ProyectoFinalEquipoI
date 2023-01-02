@@ -5,8 +5,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.LinkedList;
 import Modelo.Alumno;
+import proyectofinalequipoi.ProyectoFinalEquipoI;
 import Controlador.CRUDAlumnos;
 import Controlador.GeneradorAlumnos;
+import Controlador.GenerarDoc;
 
 
 /**
@@ -85,5 +87,8 @@ public class login {
     }
 
     public void Salir(){
+        GenerarDoc doc = new GenerarDoc();
+        doc.genDoc(GeneradorAlumnos.listado);
+        System.exit(0);
     }
 }

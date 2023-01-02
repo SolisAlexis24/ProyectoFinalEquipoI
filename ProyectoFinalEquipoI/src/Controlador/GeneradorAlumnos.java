@@ -49,7 +49,6 @@ public class GeneradorAlumnos {
             ar = new FileWriter("numsC.txt");
             pw = new PrintWriter(ar);
             for (Alumno alumno : listado) {
-                Integer nc = alumno.numCuenta;
                 pw.println(Integer.toString(alumno.numCuenta));
             }
             pw.close();

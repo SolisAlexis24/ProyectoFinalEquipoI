@@ -9,11 +9,11 @@ import java.util.StringTokenizer;
 
 /**
  *
- * @author Jair Carbajal
+ * @author EquipoI
  */
 public class HistorialAcademico extends NumInsc{
     
-    public HashMap obtenerHistorial(int semestre){
+    public HashMap<String, Integer> obtenerHistorial(int semestre){
         HashMap<String, Integer> hisAc = new HashMap<>();
         int cont=0;
         int calif;
