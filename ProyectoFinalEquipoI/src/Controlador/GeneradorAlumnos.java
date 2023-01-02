@@ -19,7 +19,7 @@ public class GeneradorAlumnos {
         DatosPersonales data = new DatosPersonales();
         LinkedList<Double> indicadores = new LinkedList<>(); //Lista del número indicador de cada alumno
         
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 500; i++) {
             listado.add(new Alumno());
         }// Genera el número de alumnos establecido por el for
         //Listado de alumnos
