@@ -74,6 +74,7 @@ public class CRUDAlumnos {
         for (Alumno alumno : listado) {
             if(alumno.numCuenta == numCuenta){
                 System.out.println("Alumno: "+alumno.nombre);
+                System.out.println("Promedio: "+alumno.promedio);
                 System.out.println("Historial académico");
                 System.out.println(alumno.histAc);
             }
@@ -93,6 +94,40 @@ public class CRUDAlumnos {
                 direccion = leer.nextLine();
                 System.out.println("La nueva direccion sera: " + direccion);
                 alumno.direccion = direccion;
+            }
+        }
+    }
+    /**
+     * Metodo para cambiar nombre de alumno
+     * @param listado lista de alumnos
+     */
+    public void cambioNombre(LinkedList<Alumno> listado){
+        Scanner leer = new Scanner(System.in);
+        String Nombre;
+        for (Alumno alumno : listado) {
+            if(alumno.numCuenta == numCuenta){
+                System.out.println("Alumno: " + alumno.nombre);
+                System.out.println("Ingrese la nuevo nombre: ");
+                Nombre = leer.nextLine();
+                System.out.println("El nuevo nombre sera: " + Nombre);
+                alumno.nombre = Nombre;
+            }
+        }
+    }
+    /**
+     * Metodo para cambiar la edad
+     * @param listado listado de alumnos
+     */
+    public void cambioEdad(LinkedList<Alumno> listado){
+        Scanner leer = new Scanner(System.in);
+        int edad;
+        for (Alumno alumno : listado) {
+            if(alumno.numCuenta == numCuenta){
+                System.out.println("Alumno: " + alumno.nombre);
+                System.out.println("Ingrese la edad: ");
+                edad = leer.nextInt();
+                System.out.println("La nueva edad sera: " + edad);
+                alumno.edad = edad;
             }
         }
     }

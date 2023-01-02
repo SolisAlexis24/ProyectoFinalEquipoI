@@ -80,8 +80,9 @@ public class modificarDatosAdmin {
                 System.out.println("3. Cambiar calificación de materia");
                 System.out.println("4. Consultar historial academica");
                 System.out.println("5. Cambiar direccion");
-                System.out.println("6. Visualizar datos academicos");
-                System.out.println("7. Guardar y regresar");
+                System.out.println("6. Cambiar nombre");
+                System.out.println("7. Cambiar edad");
+                System.out.println("8. Guardar y regresar");
                 op = leer.nextInt();
                 switch(op){
                     case 1: crud.alta(GeneradorAlumnos.listado);
@@ -94,16 +95,11 @@ public class modificarDatosAdmin {
                     break;
                     case 5: crud.cambioDomicilio(GeneradorAlumnos.listado);
                     break;
-                    case 6: for (Alumno alumno : GeneradorAlumnos.listado) {
-                                if(alumno.numCuenta == crud.numCuenta){
-                                    alumno.promedio = his.promedio(alumno.histAc);
-                                    System.out.println("Alumno: "+alumno.nombre);
-                                    System.out.println("Promedio: "+alumno.promedio);
-                                    System.out.println("Historial académico:\n"+alumno.histAc);
-                                }
-                            }
+                    case 6: crud.cambioNombre(GeneradorAlumnos.listado);
                     break;
-                    case 7: menu();
+                    case 7: crud.cambioEdad(GeneradorAlumnos.listado);
+                    break;
+                    case 8: menu();
                     break;
                     default: System.out.println("opción no válida");
                     break;
