@@ -160,10 +160,23 @@ public class CRUDAlumnos {
      * Metodo para crear alumno
      * @param listado lista de alumnos
      */
-    public Alumno crear(LinkedList<Alumno> listado){
+    public void crear(LinkedList<Alumno> listado){
         //TODO: Crear Alumno
         Alumno alu = new Alumno();
-        return alu;
+        DatosPersonales dt = new DatosPersonales();
+        Scanner info = new Scanner(System.in);
+        System.out.println("Introduzca el nombre del alumno: ");
+        alu.nombre = info.nextLine();
+        alu.numCuenta = dt.numCuenta();
+        System.out.println("El numero de cuneta de " + alu.nombre + " es: " + alu.numCuenta);
+        System.out.println("Introduzca su direccion: ");
+        alu.direccion = info.nextLine();
+        System.out.println("Introduzca su edad");
+        alu.edad = info.nextInt();
+        System.out.println("Introduzca su semestre actual");
+        alu.semestre = info.nextInt();
+        listado.add(alu);
+        System.out.println("Si desea dar de alta materias, remitase al menu para ello");
     }
     /**
      * Consulta como alumno

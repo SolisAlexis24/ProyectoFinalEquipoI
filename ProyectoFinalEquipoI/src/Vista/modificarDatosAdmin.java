@@ -47,7 +47,8 @@ public class modificarDatosAdmin {
      */
     public void crear(){
         System.out.println("--CREAR ALUMNO--");
-        //TODO: Implementar crear alumno
+        CRUDAlumnos crud = new CRUDAlumnos();
+        crud.crear(GeneradorAlumnos.listado);
     }
     /**
      * Menu para visualizrar datos de un alumno
