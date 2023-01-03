@@ -13,7 +13,7 @@ import java.util.StringTokenizer;
  *
  * @author EquipoI
  */
-public abstract class NumInsc{
+public abstract class GeneradorNumInsc{
     
     public int creditosEsc(HashMap<String,Integer> materias){
         int cont=0;

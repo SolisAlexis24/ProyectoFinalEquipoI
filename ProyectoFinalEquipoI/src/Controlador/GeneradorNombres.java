@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
  *
  * @author tripl
  */
-public class Nombres {
+public class GeneradorNombres {
     public String nombre(){
         Random rand = new Random();
         String nombre=null;

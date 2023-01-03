@@ -70,7 +70,7 @@ public class modificarDatosAdmin {
     public void modificar(){
         System.out.println("--MODIFICAR ALUMNO--");
         CRUDAlumnos crud = new CRUDAlumnos();
-        HistorialAcademico his = new HistorialAcademico();
+        GeneradorHistorialAcademico his = new GeneradorHistorialAcademico();
         if(crud.obtenerNumCuenta(GeneradorAlumnos.listado)){
             Scanner leer = new Scanner(System.in);
             int op = 0;

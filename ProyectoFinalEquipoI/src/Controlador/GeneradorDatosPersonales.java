@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
  *
  * @author EquipoI
  */
-public class DatosPersonales {
+public class GeneradorDatosPersonales {
     public int edad(){
         int edad=(int)(Math.floor(Math.random()*(26-17+1)+17));
         return edad;

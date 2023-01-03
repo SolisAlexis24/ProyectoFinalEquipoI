@@ -163,7 +163,7 @@ public class CRUDAlumnos {
     public void crear(LinkedList<Alumno> listado){
         //TODO: Crear Alumno
         Alumno alu = new Alumno();
-        DatosPersonales dt = new DatosPersonales();
+        GeneradorDatosPersonales dt = new GeneradorDatosPersonales();
         Scanner info = new Scanner(System.in);
         System.out.println("Introduzca el nombre del alumno: ");
         alu.nombre = info.nextLine();

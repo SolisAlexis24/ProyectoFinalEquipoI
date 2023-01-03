@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
  *
  * @author EquipoI
  */
-public class HistorialAcademico extends NumInsc{
+public class GeneradorHistorialAcademico extends GeneradorNumInsc{
     public HashMap<String, Integer> obtenerHistorial(int semestre){
         HashMap<String, Integer> hisAc = new HashMap<>();
         int cont=0;

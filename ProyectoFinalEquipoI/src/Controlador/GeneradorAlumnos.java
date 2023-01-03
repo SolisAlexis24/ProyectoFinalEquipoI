@@ -14,9 +14,9 @@ public class GeneradorAlumnos {
     public static LinkedList<Alumno> listado = new LinkedList<>(); //Lista de alumnos
     
     public void generar(){
-        HistorialAcademico hist = new HistorialAcademico();
-        Nombres nom = new Nombres();
-        DatosPersonales data = new DatosPersonales();
+        GeneradorHistorialAcademico hist = new GeneradorHistorialAcademico();
+        GeneradorNombres nom = new GeneradorNombres();
+        GeneradorDatosPersonales data = new GeneradorDatosPersonales();
         LinkedList<Double> indicadores = new LinkedList<>(); //Lista del número indicador de cada alumno
         
         for (int i = 0; i < 500; i++) {
